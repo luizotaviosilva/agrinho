@@ -1,0 +1,202 @@
+/* Importa a fonte Poppins do Google Fonts para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /* Cores principais para o tema Agrinho */
+    --primary-color: #4CAF50; /* Verde vibrante */
+    --secondary-color: #FFC107; /* Amarelo quente */
+    --text-color: #333; /* Cor padrão do texto */
+    --bg-color: #f8f8f8; /* Fundo suave */
+    --card-bg: #ffffff; /* Fundo dos cards */
+    --footer-bg: #388E3C; /* Verde mais escuro para o rodapé */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--footer-bg));
+    color: white;
+    padding: 2.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* Estilo da seção de introdução */
+.intro {
+    background-color: var(--card-bg);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Estilo dos cards informativos */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 colunas, adaptáveis */
+    gap: 25px;
+    margin-bottom: 2em;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efeito de flutuação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    border: 2px solid var(--secondary-color); /* Borda amarela nas imagens */
+}
+
+.card h3 {
+    color: var(--footer-bg); /* Verde mais escuro para os títulos dos cards */
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Estilo da seção de chamada para ação */
+.call-to-action {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2.5em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 50px; /* Botão arredondado */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: var(--footer-bg);
+    transform: translateY(-3px); /* Pequeno efeito de elevação */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .intro h2 {
+        font-size: 1.8em;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .card {
+        padding: 1.2em;
+    }
+
+    .card h3 {
+        font-size: 1.4em;
+    }
+
+    .call-to-action h2 {
+        font-size: 2em;
+    }
+
+    .call-to-action p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 0.8em 1.5em;
+        font-size: 1em;
+    }
+}
